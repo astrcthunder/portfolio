@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Day Clayton
+    File Name: contact.html
+    Date: 11/17/2026
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Day Clayton - Systems Engineering Portfolio</title>
+
+    <meta name="description"
+        content="Contact Day Clayton, an aspiring systems engineer based in Dallas, Texas, to connect about technology, technical skills, and professional opportunities.">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Day Clayton_</h1>
+
+        <figure>
+            <img src="images/dayclayton.png" alt="Photo of Day Clayton">
+            <figcaption>Aspiring Systems Engineer</figcaption>
+        </figure>
+    </header>
+
+    <nav class="mobile-nav" aria-label="Main navigation">
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="navigation-links"
+            onclick="toggleMenu()">
+            &#9776;
+        </button>
+
+        <ul id="navigation-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills &amp; Strengths</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <main class="content-card">
+
+        <section>
+            <h2>Contact Me</h2>
+
+            <p>
+                If you would like to get in touch with me,
+                please use the contact information or
+                form below.
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:e3688125@student.dcccd.edu">
+                    e3688125@student.dcccd.edu
+                </a>
+            </p>
+        </section>
+
+        <section class="contact-form-section">
+            <h3>Contact Form</h3>
+
+            <form class="contact-form" action="#" method="get">
+
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        required></textarea>
+                </div>
+
+                <button class="submit-button" type="submit">
+                    Send Message
+                </button>
+
+            </form>
+        </section>
+
+        <section class="contact-form-section">
+            <h3>Location</h3>
+
+            <p>
+                I am based in Dallas, Texas.
+            </p>
+
+            <iframe
+                class="mobile-map"
+                src="https://www.google.com/maps?q=Dallas%20College%20Texas&amp;output=embed"
+                title="Map showing Dallas College in Texas"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2026. All Rights Reserved.</p>
+
+        <p>
+            <a href="mailto:e3688125@student.dcccd.edu">
+                e3688125@student.dcccd.edu
+            </a>
+        </p>
+
+        <div class="social-links">
+            <a
+                href="https://www.linkedin.com/in/dayclayton"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn profile">
+                <img
+                    src="images/linkedin.png"
+                    alt="LinkedIn logo"
+                    class="social-icon">
+            </a>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>

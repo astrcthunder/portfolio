@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Day Clayton
+    File Name: template.html
+    Date: 11/17/2026
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template | Day Clayton</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Day Clayton_</h1>
+
+        <figure>
+            <img src="images/dayclayton.png" alt="Photo of Day Clayton">
+            <figcaption>Aspiring Systems Engineer</figcaption>
+        </figure>
+    </header>
+
+    <nav class="mobile-nav" aria-label="Main navigation">
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="navigation-links"
+            onclick="toggleMenu()">
+            &#9776;
+        </button>
+
+        <ul id="navigation-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills &amp; Strengths</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <main class="content-card">
+
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2026. All Rights Reserved.</p>
+        <p>
+            <a href="mailto:e3688125@student.dcccd.edu">
+                e3688125@student.dcccd.edu
+            </a>
+        </p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>

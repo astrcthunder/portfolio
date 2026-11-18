@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Day Clayton
+    File Name: index.html
+    Date: 11/17/2026
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Day Clayton - Systems Engineering Portfolio</title>
+
+    <meta name="description"
+        content="Explore the portfolio of Day Clayton, an aspiring systems engineer with interests in computer hardware, networking, cybersecurity, and web development.">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Day Clayton_</h1>
+
+        <figure>
+            <img src="images/dayclayton.png" alt="Photo of Day Clayton">
+            <figcaption>Aspiring Systems Engineer</figcaption>
+        </figure>
+    </header>
+
+    <nav class="mobile-nav" aria-label="Main navigation">
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="navigation-links"
+            onclick="toggleMenu()">
+            &#9776;
+        </button>
+
+        <ul id="navigation-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills &amp; Strengths</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <main class="content-card">
+
+        <section>
+            <h2>Welcome to My Portfolio</h2>
+
+            <p>
+                I am an aspiring systems engineer with an interest
+                in technology, problem-solving, and building my
+                technical skills through hands-on projects.
+            </p>
+
+            <!-- Viewport-specific content -->
+            <p class="mobile-only">
+                Use the menu above to explore my portfolio.
+            </p>
+
+            <p class="tablet-desktop-only">
+                Explore my portfolio using the navigation links above.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2026. All Rights Reserved.</p>
+
+        <p>
+            <a href="mailto:e3688125@student.dcccd.edu">
+                e3688125@student.dcccd.edu
+            </a>
+        </p>
+
+        <div class="social-links">
+            <a
+                href="https://www.linkedin.com/in/dayclayton"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my LinkedIn profile">
+                <img
+                    src="images/linkedin.png"
+                    alt="LinkedIn logo"
+                    class="social-icon">
+            </a>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>

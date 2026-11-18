@@ -1,0 +1,738 @@
+
+/*
+    Author: Day Clayton
+    Date: 11/17/2026
+    File Name: styles.css
+    Chapter 8 Updates: Added responsive table and form styles.
+    Chapter 9 Updates: Added music inspiration and audio player styles.
+    Chapter 10 Updates: Added hamburger navigation and CSS transforms.
+    Chapter 11 Updates: Added responsive LinkedIn icon styling.
+*/
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+}
+
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+article,
+section,
+aside,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Body and Image */
+body {
+    background-color: #f4f3ef;
+    color: #242424;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mobile Viewport */
+
+/* Header */
+header {
+    background-color: #e9e8e3;
+    color: #242424;
+    padding: 1.5em 5%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #202020;
+    letter-spacing: 0.02em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+header figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    margin: 1em auto 0;
+    border-radius: 12px;
+}
+
+header figcaption {
+    font-size: 1em;
+    font-weight: 400;
+    color: #505050;
+    margin-top: 0.75em;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    background-color: #26384a;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: block;
+    width: 100%;
+    background-color: #26384a;
+    color: #ffffff;
+    border: 0;
+    padding: 0.65em;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background-color: #344b62;
+}
+
+/* Hide Navigation Links Until Menu Opens */
+.mobile-nav ul {
+    display: none;
+    list-style-type: none;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Show Navigation Links When Menu Is Open */
+.mobile-nav ul.menu-open {
+    display: grid;
+}
+
+.mobile-nav li {
+    text-align: center;
+}
+
+.mobile-nav a {
+    display: block;
+    color: #ffffff;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 1em 0.5em;
+    text-decoration: none;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a:focus {
+    background-color: #d9d8d3;
+    color: #26384a;
+}
+
+/* Mobile Navigation Button Styling */
+@media screen and (max-width: 767px) {
+
+    .mobile-nav ul {
+        gap: 0.5em;
+        padding: 0.5em;
+    }
+
+    /* Full-Width Home Button */
+    .mobile-nav li:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .mobile-nav a {
+        background-color: #344b62;
+        border: 1px solid #61758a;
+        border-radius: 8px;
+        height: 100%;
+        align-content: center;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+        background-color: #d9d8d3;
+        color: #26384a;
+        text-decoration: none;
+    }
+}
+
+/* Main Content */
+.content-card {
+    background-color: #ffffff;
+    color: #242424;
+    width: 90%;
+    max-width: 600px;
+    margin: 1.5em auto;
+    padding: 1.5em;
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.content-card h2 {
+    color: #26384a;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.content-card h3 {
+    color: #26384a;
+    font-size: 1.2em;
+    margin-top: 1.5em;
+}
+
+.content-card p {
+    color: #333333;
+    font-size: 1em;
+    line-height: 1.7;
+    margin-top: 1em;
+}
+
+.content-card ul,
+.content-card ol {
+    margin: 1.5em 0 1.5em 1.5em;
+    line-height: 1.8;
+}
+
+/* Project Transform Effect */
+#projects article {
+    transition: transform 0.3s ease;
+}
+
+#projects article:hover {
+    transform: translateY(-5px);
+}
+
+/* Skills & Strengths Page */
+.skills-category {
+    margin-top: 2em;
+}
+
+.skills-category h3 {
+    margin-bottom: 1em;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.skill-card {
+    background-color: #f4f3ef;
+    border: 1px solid #e1e0db;
+    border-radius: 10px;
+    padding: 1.25em;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.skill-card h4 {
+    color: #26384a;
+    font-size: 1.05em;
+    font-weight: 600;
+}
+
+.skill-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-top: 0.75em;
+}
+
+/* Viewport-Specific Content */
+.mobile-only {
+    display: block;
+}
+
+.tablet-desktop-only {
+    display: none;
+}
+
+/* Responsive Google Map */
+.mobile-map {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 12px;
+    margin-top: 1em;
+}
+
+/* Links */
+a {
+    color: #26384a;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #e9e8e3;
+    color: #333333;
+    text-align: center;
+    font-size: 0.85em;
+    padding: 1.5em 5%;
+    overflow-wrap: anywhere;
+}
+
+footer p {
+    margin: 0.4em 0;
+}
+
+footer a {
+    color: #26384a;
+    text-decoration: none;
+}
+
+/* Tablet Viewport */
+@media screen and (min-width: 768px) {
+
+    .mobile-only {
+        display: none;
+    }
+
+    .tablet-desktop-only {
+        display: block;
+    }
+
+    /* Hide Hamburger Menu */
+    .menu-toggle {
+        display: none;
+    }
+
+    header {
+        padding: 2em 5%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header img {
+        width: 130px;
+    }
+
+    header figcaption {
+        font-size: 1.2em;
+    }
+
+    /* Always Show Navigation on Larger Screens */
+    .mobile-nav ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .mobile-nav a {
+        font-size: 0.95em;
+        padding: 1.2em 0.5em;
+    }
+
+    .content-card {
+        width: 85%;
+        max-width: 850px;
+        margin: 2em auto;
+        padding: 2em;
+    }
+
+    .content-card h2 {
+        font-size: 1.9em;
+    }
+
+    .content-card h3 {
+        font-size: 1.35em;
+    }
+
+    .content-card p {
+        font-size: 1.05em;
+    }
+
+    /* Two-Column Skills Grid */
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25em;
+    }
+
+    .skill-card p {
+        font-size: 0.95em;
+    }
+
+    .mobile-map {
+        height: 400px;
+    }
+
+    footer {
+        font-size: 0.9em;
+        padding: 2em 5%;
+    }
+}
+
+/* Desktop Viewport */
+@media screen and (min-width: 1024px) {
+
+    header {
+        padding: 2.5em 5%;
+    }
+
+    header h1 {
+        font-size: 3em;
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    header figcaption {
+        font-size: 1.3em;
+    }
+
+    .mobile-nav ul {
+        max-width: 1100px;
+    }
+
+    .mobile-nav a {
+        font-size: 1.05em;
+        padding: 1.3em 0.75em;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+        background-color: #ffffff;
+        color: #26384a;
+        text-decoration: none;
+    }
+
+    .content-card {
+        width: 75%;
+        max-width: 1000px;
+        margin: 2.5em auto;
+        padding: 3em;
+        transition: box-shadow 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .content-card h2 {
+        font-size: 2.2em;
+    }
+
+    .content-card h3 {
+        font-size: 1.5em;
+    }
+
+    .content-card p {
+        font-size: 1.1em;
+    }
+
+    .content-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        transform: translateY(-3px);
+    }
+
+    .skill-card {
+        transition: box-shadow 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+        transform: translateY(-2px);
+    }
+
+    .skill-card p {
+        font-size: 1em;
+    }
+
+    .mobile-map {
+        height: 450px;
+    }
+
+    footer {
+        font-size: 0.95em;
+    }
+}
+
+/* Chapter 8 Update: Responsive Technical Proficiencies Table */
+
+/* Mobile Table Styles */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1.5em;
+}
+
+.proficiency-table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+    border: 1px solid #e1e0db;
+    background-color: #ffffff;
+}
+
+.proficiency-table caption {
+    color: #505050;
+    font-size: 0.9em;
+    padding: 0.75em;
+    text-align: left;
+}
+
+.proficiency-table th,
+.proficiency-table td {
+    padding: 1em;
+    border: 1px solid #e1e0db;
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.proficiency-table thead {
+    background-color: #26384a;
+    color: #ffffff;
+}
+
+.proficiency-table tbody th {
+    color: #26384a;
+    font-weight: 600;
+}
+
+.proficiency-table tbody tr:nth-child(even) {
+    background-color: #f4f3ef;
+}
+
+/* Tablet Table Styles */
+@media screen and (min-width: 768px) {
+
+    .proficiency-table {
+        min-width: 0;
+    }
+
+    .proficiency-table th,
+    .proficiency-table td {
+        padding: 1em;
+        font-size: 0.95em;
+    }
+}
+
+/* Desktop Table Styles */
+@media screen and (min-width: 1024px) {
+
+    .proficiency-table th,
+    .proficiency-table td {
+        padding: 1.25em;
+        font-size: 1em;
+    }
+
+    .proficiency-table tbody tr:hover {
+        background-color: #e9e8e3;
+    }
+}
+
+/* Chapter 8 Update: Responsive Contact Form */
+
+/* Mobile Form Styles */
+.contact-form-section {
+    margin-top: 2em;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25em;
+    margin-top: 1.5em;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.form-field label {
+    color: #26384a;
+    font-size: 0.95em;
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 0.9em;
+    border: 1px solid #c8c8c2;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #242424;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: 2px solid #61758a;
+    outline-offset: 2px;
+}
+
+.submit-button {
+    background-color: #26384a;
+    color: #ffffff;
+    border: 1px solid #26384a;
+    border-radius: 8px;
+    padding: 1em 1.5em;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    background-color: #344b62;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Tablet Form Styles */
+@media screen and (min-width: 768px) {
+
+    .contact-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .form-field:nth-child(3),
+    .form-field:nth-child(4) {
+        grid-column: 1 / -1;
+    }
+
+    .submit-button {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+}
+
+/* Desktop Form Styles */
+@media screen and (min-width: 1024px) {
+
+    .contact-form {
+        gap: 1.5em;
+    }
+
+    .form-field input,
+    .form-field textarea {
+        padding: 1em;
+    }
+
+    .submit-button {
+        transition: background-color 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+}
+
+/* Chapter 9 Update: Project Audio Player */
+
+/* Music Inspiration Section */
+.music-inspiration {
+    margin-top: 2em;
+}
+
+.music-inspiration h4 {
+    color: #26384a;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.75em;
+}
+
+.music-inspiration p {
+    margin-top: 0;
+    margin-bottom: 1.25em;
+}
+
+.music-inspiration audio {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 1em;
+}
+
+.music-inspiration .music-credit {
+    color: #505050;
+    font-size: 0.85em;
+    line-height: 1.5;
+    margin-top: 0.75em;
+    margin-bottom: 0;
+}
+
+/* Chapter 11 Update: Responsive LinkedIn Icon */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    background-color: #26384a;
+    border-radius: 10px;
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    background-color: #344b63;
+}
+
+.social-links a:focus-visible {
+    outline: 3px solid #26384a;
+    outline-offset: 4px;
+}
+
+.social-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Mobile LinkedIn Icon */
+@media screen and (max-width: 767px) {
+
+    .social-links a {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* Desktop LinkedIn Icon */
+@media screen and (min-width: 1024px) {
+
+    .social-links a {
+        width: 52px;
+        height: 52px;
+    }
+}
